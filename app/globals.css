@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --canvas: #edf7f2;
+  --soft: #9ec8b9;
+  --slate: #5c8374;
+  --charcoal: #092635;
+  --accent: #1b4242;
+  --surface: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--charcoal);
+  background-color: var(--canvas);
+  background-image: linear-gradient(
+    118deg,
+    #b8d8ca 0%,
+    #e6f2ec 24%,
+    #ffffff 55%,
+    #d2e7dc 78%,
+    #a9cfbf 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workspace-panel {
+  border: 1px solid rgba(92, 131, 116, 0.38);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 45px rgba(9, 38, 53, 0.13);
+  backdrop-filter: blur(8px);
+}
+
+.section-divider {
+  justify-content: center;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, var(--soft));
+}
+
+.section-divider::after {
+  background: linear-gradient(to left, transparent, var(--soft));
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(92, 131, 116, 0.46);
+}
+
+.answer-content h1,
+.answer-content h2,
+.answer-content h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.answer-content h1 {
+  font-size: 1.1rem;
+}
+
+.answer-content h2 {
+  font-size: 1rem;
+}
+
+.answer-content h3 {
+  font-size: 0.95rem;
+}
+
+.answer-content p + p {
+  margin-top: 0.75rem;
+}
+
+.answer-content ul,
+.answer-content ol {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+}
+
+.answer-content ul {
+  list-style: disc;
+}
+
+.answer-content ol {
+  list-style: decimal;
+}
+
+.answer-content li + li {
+  margin-top: 0.25rem;
+}
+
+.answer-content strong {
+  font-weight: 700;
+}
+
+.input-field {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(92, 131, 116, 0.58);
+}
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(158, 200, 185, 0.42);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--canvas);
+}
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--soft);
+  color: var(--charcoal);
+}
+.btn-outline:hover:not(:disabled) {
+  background: rgba(158, 200, 185, 0.24);
+}
+.btn-outline:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.badge {
+  background: rgba(158, 200, 185, 0.34);
+  color: var(--charcoal);
 }
