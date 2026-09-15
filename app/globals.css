@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #edf5ff;
+  --canvas: #eafcff;
   --soft: #6aeafb;
   --slate: #4d969d;
   --charcoal: #121f2b;
@@ -15,11 +15,11 @@ body {
   background-color: var(--canvas);
   background-image: linear-gradient(
     118deg,
-    #cfe3ff 0%,
-    #eaf3ff 24%,
+    #8ce9ea 0%,
+    #dffcff 24%,
     #ffffff 55%,
-    #dfeeff 78%,
-    #bfd9f5 100%
+    #d6f7ff 78%,
+    #8fe2e8 100%
   );
   background-attachment: fixed;
   background-repeat: no-repeat;
