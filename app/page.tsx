@@ -200,7 +200,7 @@ export default function Home() {
               <span className="text-sm text-[var(--slate)]">
                 {isReady
                   ? "Ask anything about your document."
-                  : "Index a document on the left to get started."}
+                  : "Upload a document on the left to get started."}
               </span>
             </div>
           )}
