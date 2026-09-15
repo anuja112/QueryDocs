@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import questionTalk from "./question-talk.png";
 
 type Source = { text: string; documentName: string; score: number };
 type Status = "idle" | "loading" | "success" | "error";
@@ -186,7 +188,15 @@ export default function Home() {
 
         <div className="min-h-0 flex-1 space-y-4 overflow-y-auto pr-1">
           {!answer && !error && (
-            <div className="flex h-full flex-col items-center justify-center gap-1 text-center">
+            <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+              <Image
+                src={questionTalk}
+                alt="Question illustration"
+                width={120}
+                height={120}
+                className="h-28 w-28 object-contain opacity-90"
+                priority
+              />
               <span className="text-sm text-[var(--slate)]">
                 {isReady
                   ? "Ask anything about your document."
