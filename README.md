@@ -1,4 +1,4 @@
-# QueryDocs
+# <img src="public/file.svg" alt="QueryDocs icon" width="28" height="28" /> QueryDocs
 
 QueryDocs is a document-grounded question-answering assistant. Upload a PDF or TXT document, or paste text directly, and ask questions about its contents. Answers are generated from retrieved document chunks rather than general model memory.
 
