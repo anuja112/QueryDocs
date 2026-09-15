@@ -33,7 +33,7 @@ export default function RootLayout({
         <header className="shrink-0">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-6 py-7 text-center">
             <h1
-              className={`${titleFont.className} text-4xl font-bold tracking-tight text-[var(--charcoal)] md:text-5xl`}
+              className={`${titleFont.className} text-4xl font-bold tracking-tight text-[#142b48] md:text-5xl`}
             >
               QueryDocs
             </h1>
